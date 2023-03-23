@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Fact</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <style>
+        body {
+            background-color: #F9E79F;
+        }
+        .container-fluid.bg-dark {
+            background-color: #A9DFBF;
+        }
+        .card {
+            background-color: #EBDEF0;
+            border-color: #F8C9CC;
+        }
+        .card-title {
+            color: #EC7063;
+        }
+        .card-text {
+            color: #2E4053;
+        }
+        .btn-primary {
+            background-color: #EC7063;
+            border-color: #EC7063;
+        }
+        .btn-primary:hover {
+            background-color: #D35400;
+            border-color: #D35400;
+        }
+    </style>
+    <title>Number Facts test</title>
+</head>
+<body>
+<div class="container-fluid bg-dark text-white d-flex justify-content-center">
+    <h2>Number Fact</h2>
+</div>
+<div class="container-fluid border pt-2 d-flex justify-content-center">
+    <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="https://picsum.photos/1000/600?random=1">
+        <div class="card-body">
+            <h5 class="card-title">Fact of the year:</h5>
+            <p class="card-text" th:text="${fact.number}"></p>
+            <p class="card-text" th:text="-------------------"></p>
+            <p class="card-text" th:text="${fact.text}"></p>
+            <a href="#" class="btn btn-primary" onclick="window.location.reload();">Refresh</a>
+            <img class="card-text" th:src="${img_url}" alt="random image" style="width: 50%; height: auto;">
+        </div>
+    </div>
+</div>
+</body>
+</html>
